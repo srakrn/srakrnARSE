@@ -1,0 +1,13 @@
+{
+  "name": "srakrnARSE",
+  "version": "1.1.2",
+  "description": "Audience Response System, e-controlled.",
+  "engines": {
+    "node": "0.12.4",
+    "npm": "2.6.0"
+  },
+  "dependencies": {
+    "express": "4.10.2",
+    "socket.io": "1.2.0"
+  }
+}

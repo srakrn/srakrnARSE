@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Student | srakrnARSE</title>
+
+    <!-- Bootstrap core CSS -->
+    <style>
+      body{
+        font-family: sans-serif;
+        font-size: 20px;
+      }
+      input[type="text"]
+      {
+        font-size: 20px;
+        color: #cd1111;
+      }
+      h1{
+        font-size: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Using the ARS system</h1>
+    <ul>
+      <li id="url"></li>
+      <li>In the class ID Form, fill in <input type="text" class="form-control" placeholder="Fill in Class ID Here" id="projClassID"></li>
+    </ul>
+
+    <h3 class="panel-title">Logs <button class="btn btn-danger" type="button" id="clearLogs">Clear Logs</button></h3>
+    <ul id="messages">
+    </ul>
+  </body>
+
+  <script src="socket.js"></script>
+  <script src="jquery.js"></script>
+  <script src="projection.js"></script>
+</html>
