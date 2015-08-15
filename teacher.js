@@ -82,6 +82,14 @@ $('#teacherStop').click(function(){
   socket.emit('teacherX',{classID:$('#classidechoer').text(), questionName:'(no questions are running)', systemCommander:'answerClose'});
 });
 
+$('#chime').click(function(){
+  socket.emit('teacherSoundCommands',{classID:$('#classidechoer').text(), systemCommander:'chime'});
+});
+
+$('#buzzer').click(function(){
+  socket.emit('teacherSoundCommands',{classID:$('#classidechoer').text(), systemCommander:'buzzer'});
+});
+
 socket.on('teacherX', function(teacherX){
   if(teacherX['classID'] == $('#classidechoer').text())
     {
