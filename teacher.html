@@ -32,10 +32,10 @@
       </div>
     </nav>
 
-    <div class="container">
+<div class="container">
 
       <!--Info form-->
-      <div class="col-md-4">
+    <div class="col-md-4">
       <div class="panel panel-default">
           <div class="panel-heading">
             <a data-toggle="collapse" href="#controlpanel" aria-expanded="false" aria-controls="controlpanel">
@@ -74,18 +74,29 @@
             <tr id="teacherStopSec">
               <td><button class="btn btn-danger" type="button" id="teacherStop" style="width: 100%">Stop any running questions</button></td>
             </tr>
+            <tr>
+              <td><button class="btn btn-info" type="button" id="chime" style="width: 100%">Play Chime</button></td>
+            </tr>
+            <tr>
+              <td><button class="btn btn-info" type="button" id="buzzer" style="width: 100%">Play Buzzer</button></td>
+            </tr>
+            <tr>
+              <td>
+                <p class="small"><a href="http://freesound.org/people/Benboncan/sounds/93646/">Chime sounds by Benbocan under Creative Commons</a></p>
+              </tf>
+            </tr>
           </table>
         </div>
       </div>
     </div>
 
       <!--Info form-->
-      <div class="col-md-8">
-        <h1>Logs <button class="btn btn-danger" type="button" id="clearLogs">Clear Logs</button></h1>
+    <div class="col-md-8">
+      <h1>Logs <button class="btn btn-danger" type="button" id="clearLogs">Clear Logs</button></h1>
         <div id="messages">
         </div>
-      </div>
-    </div><!-- /.container -->
+    </div>
+</div><!-- /.container -->
 
     <script src="jquery.js"></script>
     <script src="socket.js"></script>
