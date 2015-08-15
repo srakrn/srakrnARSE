@@ -1,10 +1,7 @@
 // Normal socket.io initalisation, and variables declaration
 var socket = io();
 
-
 //And the command are received by students.
-
-
 socket.on('teacherX', function(teacherX){
   if (teacherX['classID'] == $('#channel').val()){
     switch(teacherX['systemCommander']){

@@ -117,7 +117,6 @@ socket.on('teacherX', function(teacherX){
 
 //And the answers are appened.
 socket.on('studentX', function(studentX){
-  debug = studentX;
   if ( studentX['classID'] == $('#classidechoer').text() && studentX['questionName'] == $('#questionName').val() ){
     $('#a'+nQuestion).append($('<li>').text(studentX['name'] + " answered: " + studentX['answer']));
     if(questionRunning == "multiple"){
