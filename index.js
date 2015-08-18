@@ -51,8 +51,8 @@ app.get('/projection.js', function(req, res){
   res.sendFile(__dirname + '/projection.js');
 });
 
-app.get('/pentest.js', function(req, res){
-  res.sendFile(__dirname + '/pentest.js');
+app.get('/projection', function(req, res){
+  res.sendFile(__dirname + '/projection.html');
 });
 
 app.get('/bootstrap.css', function(req, res){
@@ -63,10 +63,25 @@ app.get('/bootstrap.js', function(req, res){
   res.sendFile(__dirname + '/bootstrap.js');
 });
 
+app.get('/chime.wav', function(req, res){
+  res.sendFile(__dirname + '/chime.wav');
+});
+
+app.get('/buzzer.wav', function(req, res){
+  res.sendFile(__dirname + '/buzzer.wav');
+});
+
 io.on('connection', function(socket){
   socket.on('teacherX', function(value){
     console.log("teacherX: " + value);
     io.emit('teacherX', value);
+  });
+});
+
+io.on('connection', function(socket){
+  socket.on('teacherSoundCommands', function(value){
+    console.log("teacherSoundCommands: " + value);
+    io.emit('teacherSoundCommands', value);
   });
 });
 
@@ -76,7 +91,6 @@ io.on('connection', function(socket){
     io.emit('studentX', value);
   });
 });
-
 
 http.listen(port, function(){
   console.log('listening on *:' + port);

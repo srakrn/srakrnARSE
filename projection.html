@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Projection | srakrnARSE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+      body{
+        padding-top: 70px !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><input type="text" class="form-control" placeholder="Question Name" id="classID"></a>
+      </div>
+    </nav>
+
+<div class="container">
+      <h1>Logs <button class="btn btn-danger" type="button" id="clearLogs">Clear Logs</button></h1>
+        <div id="messages">
+        </div>
+</div><!-- /.container -->
+
+    <script src="jquery.js"></script>
+    <script src="socket.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="projection.js"></script>
+  </body>
+</html>
