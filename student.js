@@ -1,6 +1,10 @@
 // Normal socket.io initalisation, and variables declaration
 var socket = io();
 
+//Sounds
+var chime = new Audio('chime.wav');
+var buzzer = new Audio('buzzer.wav');
+
 //And the command are received by students.
 socket.on('teacherX', function(teacherX){
   if (teacherX['classID'] == $('#channel').val()){
@@ -76,4 +80,17 @@ $('#buzzerClick').click(function(){
     $('#buzzer').hide();
   }
   return false;
+});
+
+socket.on('teacherSoundCommands', function(teacherSoundCommands){
+  if (teacherSoundCommands['classID'] == $('#channel').val()){
+    switch(teacherSoundCommands['systemCommander']){
+      case 'chime':
+        chime.play();
+      break;
+      case 'buzzer':
+        buzzer.play();
+      break;
+    }
+  }
 });
